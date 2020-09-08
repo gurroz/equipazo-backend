@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.10/625fc0055674dff70dbc76efa36d0f2c89b04a24/lombok-1.18.10.jar" />
+        </processorPath>
+        <module name="equipazo.adapters.persistence.main" />
+        <module name="equipazo.configuration.main" />
+        <module name="equipazo.app.main" />
+        <module name="equipazo.adapters.rest.main" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="api" target="1.8" />
+      <module name="api.main" target="1.8" />
+      <module name="api.test" target="1.8" />
+      <module name="equipazo.adapters" target="1.8" />
+      <module name="equipazo.adapters.main" target="1.8" />
+      <module name="equipazo.adapters.persistence" target="1.8" />
+      <module name="equipazo.adapters.persistence.main" target="1.8" />
+      <module name="equipazo.adapters.persistence.test" target="1.8" />
+      <module name="equipazo.adapters.rest" target="1.8" />
+      <module name="equipazo.adapters.rest.main" target="1.8" />
+      <module name="equipazo.adapters.rest.test" target="1.8" />
+      <module name="equipazo.adapters.test" target="1.8" />
+      <module name="equipazo.app" target="1.8" />
+      <module name="equipazo.app.main" target="1.8" />
+      <module name="equipazo.app.test" target="1.8" />
+      <module name="equipazo.configuration" target="1.8" />
+      <module name="equipazo.configuration.main" target="1.8" />
+      <module name="equipazo.configuration.test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

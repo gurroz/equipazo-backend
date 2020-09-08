@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: de.adesso:junit-insights:1.1.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/de.adesso/junit-insights/1.1.0/164aad8c35f6c3a9ab6d6f777f8df85ec6460fa2/junit-insights-1.1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/de.adesso/junit-insights/1.1.0/a5c5bf1e1cecc5ac3dd0572f224144e0c4ba52cc/junit-insights-1.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

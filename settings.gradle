@@ -1,0 +1,5 @@
+rootProject.name = 'equipazo'
+include 'configuration'
+include 'adapters:rest'
+include 'adapters:persistence'
+include 'app'
