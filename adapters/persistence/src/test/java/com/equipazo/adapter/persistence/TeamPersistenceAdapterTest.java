@@ -1,6 +1,6 @@
 package com.equipazo.adapter.persistence;
 
-import com.equipazo.domain.src.Team;
+import com.equipazo.domain.Team;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
@@ -26,7 +26,7 @@ public class TeamPersistenceAdapterTest {
 
         assertThat(teamRepository.count()).isEqualTo(1);
 
-        TeamJPAEntity savedActivity = teamRepository.findAll().get(0);
-        assertThat(savedActivity.getName()).isEqualTo("Naranja");
+        Team savedTeam = adapterUnderTest.getTeams().get(0);
+        assertThat(savedTeam.getName()).isEqualTo("Naranja");
     }
 }

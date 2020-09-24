@@ -8,8 +8,8 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 
 	implementation project(':app')
-	implementation project(':adapters:rest')
 	implementation project(':adapters:persistence')
+	implementation project(':adapters:rest')
 
 	implementation ('org.springframework.boot:spring-boot-starter-web')
 	runtimeOnly 'com.h2database:h2'

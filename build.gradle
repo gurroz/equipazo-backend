@@ -4,7 +4,7 @@ plugins {
 
 subprojects {
 
-	group = 'com.equipazo'
+	group = 'com.equipazo.backend'
 	version = '0.0.1-SNAPSHOT'
 
 	apply plugin: 'java'
