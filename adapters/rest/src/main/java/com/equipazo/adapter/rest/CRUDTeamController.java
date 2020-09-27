@@ -60,6 +60,22 @@ public class CRUDTeamController {
         return responseBody;
     }
 
+    @GetMapping("/{id}")
+    public TeamDataDTO getTeam(@PathVariable long id, HttpServletResponse response) {
+        TeamDataDTO responseBody = null;
+        log.debug("Starting getTeams");
+        try {
+            response.setStatus(HttpStatus.OK.value());
+            Team team = CRUDTeamUseCase.getTeam(id);
+            responseBody = new TeamDataDTO(team, "/rest/teams/");
+        } catch(Exception e) {
+            log.error("Error is: {}", e);
+            response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
+        }
+
+        return responseBody;
+    }
+
     @GetMapping(value = "/{id}/emblem",
             produces = MediaType.IMAGE_JPEG_VALUE)
     public byte[] getEmblem(@PathVariable long id, HttpServletResponse response) {

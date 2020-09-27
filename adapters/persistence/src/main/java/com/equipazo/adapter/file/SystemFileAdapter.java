@@ -22,14 +22,18 @@ public class SystemFileAdapter implements SaveFilePort {
         String result = "";
         if(file != null && !file.isEmpty() && filePath != null) {
             File folder = new File(filePath);
-            if(!folder.exists() && folder.canWrite()) {
+            if(!folder.exists()) {
                 folder.mkdir();
             }
-            file.transferTo(folder);
-            result = filePath + file.getOriginalFilename();
-        }
 
-        log.debug("Saved file to: {}, {}", filePath, result);
+            String finalPath = filePath + file.getOriginalFilename();
+            File dest = new File(finalPath);
+
+            file.transferTo(dest);
+            result = finalPath;
+
+            log.debug("Saved file to: {}", result);
+        }
 
         return result;
     }

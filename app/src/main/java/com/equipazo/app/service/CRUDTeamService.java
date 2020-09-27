@@ -49,6 +49,11 @@ public class CRUDTeamService implements CRUDTeamUseCase {
     }
 
     @Override
+    public Team getTeam(long id) {
+        return CRUDTeamPort.getTeam(id);
+    }
+
+    @Override
     @SneakyThrows
     public InputStream getTeamEmblem(long id) {
         Team team = CRUDTeamPort.getTeam(id);

@@ -9,5 +9,6 @@ import java.util.List;
 public interface CRUDTeamUseCase {
     void saveTeam(Team team, InputStreamSource emblem);
     List<Team> getTeams();
+    Team getTeam(long id);
     InputStream getTeamEmblem(long id);
 }
