@@ -8,5 +8,5 @@ import java.util.List;
 public class Squad {
     private long id;
     private int numberPlayers;
-    private List<Player> players;
+    private List<TeamMember> players;
 }

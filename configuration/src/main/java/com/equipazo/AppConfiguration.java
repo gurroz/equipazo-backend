@@ -1,6 +1,7 @@
 package com.equipazo;
 
 import com.equipazo.adapter.rest.TeamDataConverter;
+import com.equipazo.adapter.rest.TeamMemberConverter;
 import com.equipazo.app.service.SaveTeamProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
@@ -17,6 +18,7 @@ public class AppConfiguration implements WebMvcConfigurer {
     @Override
     public void addFormatters(FormatterRegistry registry) {
         registry.addConverter(new TeamDataConverter());
+        registry.addConverter(new TeamMemberConverter());
     }
 
     @Bean

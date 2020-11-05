@@ -8,5 +8,5 @@ import java.util.Map;
 public class Formation {
     private long id;
     private Squad squad;
-    private Map<PlayerPosition, Player> positions;
+    private Map<PlayerPosition, TeamMember> positions;
 }

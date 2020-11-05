@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - TeamMemberPersistenceAdapterTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>TeamMemberPersistenceAdapterTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.equipazo.adapter.persistence.html">com.equipazo.adapter.persistence</a> &gt; TeamMemberPersistenceAdapterTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.230s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">createTeamMember()</td>
+<td class="success">0.230s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>21:58:13.864 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+21:58:13.877 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+21:58:13.891 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.equipazo.adapter.persistence.TeamMemberPersistenceAdapterTest] from class [org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper]
+21:58:13.907 [Test worker] INFO org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.equipazo.adapter.persistence.TeamMemberPersistenceAdapterTest], using SpringBootContextLoader
+21:58:13.910 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.equipazo.adapter.persistence.TeamMemberPersistenceAdapterTest]: class path resource [com/equipazo/adapter/persistence/TeamMemberPersistenceAdapterTest-context.xml] does not exist
+21:58:13.910 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.equipazo.adapter.persistence.TeamMemberPersistenceAdapterTest]: class path resource [com/equipazo/adapter/persistence/TeamMemberPersistenceAdapterTestContext.groovy] does not exist
+21:58:13.910 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.equipazo.adapter.persistence.TeamMemberPersistenceAdapterTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+21:58:13.911 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.equipazo.adapter.persistence.TeamMemberPersistenceAdapterTest]: TeamMemberPersistenceAdapterTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+21:58:13.964 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.equipazo.adapter.persistence.TeamMemberPersistenceAdapterTest]
+21:58:14.003 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/Users/gurroz/Workspace/equipazo-backend/adapters/persistence/build/classes/java/test/com/equipazo/adapter/persistence/TestApplication.class]
+21:58:14.009 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.equipazo.adapter.persistence.TestApplication for test class com.equipazo.adapter.persistence.TeamMemberPersistenceAdapterTest
+21:58:14.010 [Test worker] DEBUG org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper - @TestExecutionListeners is not present for class [com.equipazo.adapter.persistence.TeamMemberPersistenceAdapterTest]: using defaults.
+21:58:14.010 [Test worker] INFO org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+21:58:14.023 [Test worker] INFO org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@36f5571d, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@68e617f4, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@56d18d89, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@9f2886c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@15237bf0, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4da28717, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@17c5f6ef, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@ae9bd93, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@49bbbc5, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5d580e7e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6592e9b4, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@22d0c5b0]
+21:58:14.028 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@182e5d70 testClass = TeamMemberPersistenceAdapterTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@2298972b testClass = TeamMemberPersistenceAdapterTest, locations = '{}', classes = '{class com.equipazo.adapter.persistence.TestApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[de.adesso.junitinsights.spring.BenchmarkContextCustomizerFactory$createContextCustomizer$1@213917a8, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@178ca493, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@2609fd80, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@7e2211, [ImportsContextCustomizer@39d50d16 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration, com.equipazo.adapter.persistence.TeamMemberPersistenceAdapter, com.equipazo.adapter.persistence.TeamMemberMapper, com.equipazo.adapter.persistence.UserMapper, com.equipazo.adapter.persistence.TeamMapper, com.equipazo.adapter.persistence.TeamPersistenceAdapter]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@610bbbe9, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@43d5d9e, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]], class annotated with @DirtiesContext [false] with mode [null].
+21:58:14.036 [Test worker] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@182e5d70 testClass = TeamMemberPersistenceAdapterTest, testInstance = com.equipazo.adapter.persistence.TeamMemberPersistenceAdapterTest@3413ea7f, testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@2298972b testClass = TeamMemberPersistenceAdapterTest, locations = '{}', classes = '{class com.equipazo.adapter.persistence.TestApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[de.adesso.junitinsights.spring.BenchmarkContextCustomizerFactory$createContextCustomizer$1@213917a8, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@178ca493, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@2609fd80, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@7e2211, [ImportsContextCustomizer@39d50d16 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration, com.equipazo.adapter.persistence.TeamMemberPersistenceAdapter, com.equipazo.adapter.persistence.TeamMemberMapper, com.equipazo.adapter.persistence.UserMapper, com.equipazo.adapter.persistence.TeamMapper, com.equipazo.adapter.persistence.TeamPersistenceAdapter]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@610bbbe9, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@43d5d9e, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]]].
+21:58:14.120 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true, server.port=-1}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.1.9.RELEASE)
+
+2020-10-27 21:58:14.340  INFO 97938 --- [    Test worker] c.e.a.p.TeamMemberPersistenceAdapterTest : Starting TeamMemberPersistenceAdapterTest on taloMac with PID 97938 (started by gurroz in /Users/gurroz/Workspace/equipazo-backend/adapters/persistence)
+2020-10-27 21:58:14.363  INFO 97938 --- [    Test worker] c.e.a.p.TeamMemberPersistenceAdapterTest : No active profile set, falling back to default profiles: default
+2020-10-27 21:58:14.751  WARN 97938 --- [kground-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add &quot;com.fasterxml.jackson.module:jackson-module-kotlin&quot; to the classpath
+2020-10-27 21:58:14.798  INFO 97938 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-10-27 21:58:14.906  INFO 97938 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 98ms. Found 3 repository interfaces.
+2020-10-27 21:58:14.970  INFO 97938 --- [    Test worker] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2020-10-27 21:58:15.160  INFO 97938 --- [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:440f7ce4-85b6-46bb-a92e-e3f819860916;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2020-10-27 21:58:15.591  INFO 97938 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-10-27 21:58:15.659  INFO 97938 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.12.Final}
+2020-10-27 21:58:15.660  INFO 97938 --- [    Test worker] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-10-27 21:58:15.788  INFO 97938 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-10-27 21:58:15.904  INFO 97938 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+Hibernate: drop table team if exists
+Hibernate: drop table team_member if exists
+Hibernate: drop table user if exists
+Hibernate: drop sequence if exists hibernate_sequence
+Hibernate: create sequence hibernate_sequence start with 1 increment by 1
+Hibernate: create table team (id bigint not null, emblem varchar(255), name varchar(255) not null, primary key (id))
+Hibernate: create table team_member (image varchar(255), user_id bigint not null, team_id bigint not null, primary key (team_id, user_id))
+Hibernate: create table user (id bigint not null, mobile varchar(255), name varchar(255), primary key (id))
+Hibernate: alter table team add constraint UK_g2l9qqsoeuynt4r5ofdt1x2td unique (name)
+Hibernate: alter table team_member add constraint FKg24qjftfifisxhilscl0vmrb1 foreign key (user_id) references user
+Hibernate: alter table team_member add constraint FK9ubp79ei4tv4crd0r9n7u5i6e foreign key (team_id) references team
+2020-10-27 21:58:16.518  INFO 97938 --- [    Test worker] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@1fb8b070'
+2020-10-27 21:58:16.521  INFO 97938 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-10-27 21:58:16.919  INFO 97938 --- [    Test worker] c.e.a.p.TeamMemberPersistenceAdapterTest : Started TeamMemberPersistenceAdapterTest in 2.797 seconds (JVM running for 3.736)
+2020-10-27 21:58:16.938  INFO 97938 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@182e5d70 testClass = TeamMemberPersistenceAdapterTest, testInstance = com.equipazo.adapter.persistence.TeamMemberPersistenceAdapterTest@3413ea7f, testMethod = createTeamMember@TeamMemberPersistenceAdapterTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@2298972b testClass = TeamMemberPersistenceAdapterTest, locations = '{}', classes = '{class com.equipazo.adapter.persistence.TestApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[de.adesso.junitinsights.spring.BenchmarkContextCustomizerFactory$createContextCustomizer$1@213917a8, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@178ca493, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@2609fd80, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@7e2211, [ImportsContextCustomizer@39d50d16 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration, com.equipazo.adapter.persistence.TeamMemberPersistenceAdapter, com.equipazo.adapter.persistence.TeamMemberMapper, com.equipazo.adapter.persistence.UserMapper, com.equipazo.adapter.persistence.TeamMapper, com.equipazo.adapter.persistence.TeamPersistenceAdapter]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@610bbbe9, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@43d5d9e, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@6acc1244]; rollback [true]
+Hibernate: call next value for hibernate_sequence
+Hibernate: call next value for hibernate_sequence
+Hibernate: select teammember0_.team_id as team_id3_1_0_, teammember0_.user_id as user_id2_1_0_, teammember0_.image as image1_1_0_ from team_member teammember0_ where teammember0_.team_id=? and teammember0_.user_id=?
+2020-10-27 21:58:17.017  INFO 97938 --- [    Test worker] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+Hibernate: insert into team (emblem, name, id) values (?, ?, ?)
+Hibernate: insert into user (mobile, name, id) values (?, ?, ?)
+Hibernate: insert into team_member (image, team_id, user_id) values (?, ?, ?)
+Hibernate: select count(*) as col_0_0_ from team_member teammember0_
+2020-10-27 21:58:17.154  INFO 97938 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test: [DefaultTestContext@182e5d70 testClass = TeamMemberPersistenceAdapterTest, testInstance = com.equipazo.adapter.persistence.TeamMemberPersistenceAdapterTest@3413ea7f, testMethod = createTeamMember@TeamMemberPersistenceAdapterTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@2298972b testClass = TeamMemberPersistenceAdapterTest, locations = '{}', classes = '{class com.equipazo.adapter.persistence.TestApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[de.adesso.junitinsights.spring.BenchmarkContextCustomizerFactory$createContextCustomizer$1@213917a8, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@178ca493, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@2609fd80, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@7e2211, [ImportsContextCustomizer@39d50d16 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration, com.equipazo.adapter.persistence.TeamMemberPersistenceAdapter, com.equipazo.adapter.persistence.TeamMemberMapper, com.equipazo.adapter.persistence.UserMapper, com.equipazo.adapter.persistence.TeamMapper, com.equipazo.adapter.persistence.TeamPersistenceAdapter]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@610bbbe9, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@43d5d9e, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]]
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 6.4.1</a> at 27/10/2020 9:58:17 PM</p>
+</div>
+</div>
+</body>
+</html>

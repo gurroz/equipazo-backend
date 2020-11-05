@@ -19,7 +19,7 @@ public class TeamPersistenceAdapterTest {
     private TeamRepository teamRepository;
 
     @Test
-    void updatesActivities() {
+    void saveTeam() {
         Team team = new Team(null, "Naranja", "http://www.google.com/naranja");
 
         adapterUnderTest.saveTeam(team);
@@ -29,4 +29,5 @@ public class TeamPersistenceAdapterTest {
         Team savedTeam = adapterUnderTest.getTeams().get(0);
         assertThat(savedTeam.getName()).isEqualTo("Naranja");
     }
+
 }

@@ -6,7 +6,9 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
+import javax.persistence.EntityNotFoundException;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Slf4j
@@ -18,10 +20,12 @@ class TeamPersistenceAdapter implements CRUDTeamPort {
     private final TeamMapper teamMapper;
 
     @Override
-    public void saveTeam(Team team) {
+    public Team saveTeam(Team team) {
         TeamJPAEntity entity = teamMapper.mapToJpaEntity(team);
         log.debug("Saving TeamJpa: {}", entity);
-        teamRepository.save(entity);
+        entity = teamRepository.save(entity);
+
+        return teamMapper.mapToTeam(entity);
     }
 
     @Override
@@ -31,8 +35,16 @@ class TeamPersistenceAdapter implements CRUDTeamPort {
     }
 
     @Override
-    public Team getTeam(long id) {
-        TeamJPAEntity entity = teamRepository.getOne(id);
-        return teamMapper.mapToTeam(entity);
+    public Optional<Team> getTeam(long id) {
+        try {
+            TeamJPAEntity entity = teamRepository.getOne(id);
+            return Optional.of(teamMapper.mapToTeam(entity));
+        } catch(EntityNotFoundException e) {
+            log.debug("Entity not found getTeam: {}", e);
+        } catch(Exception e) {
+            log.error("Error getTeam: {}", e);
+        }
+
+        return Optional.empty();
     }
 }

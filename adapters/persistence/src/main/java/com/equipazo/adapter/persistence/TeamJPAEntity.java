@@ -25,5 +25,4 @@ class TeamJPAEntity {
 
     @Column
     private String emblem;
-
 }

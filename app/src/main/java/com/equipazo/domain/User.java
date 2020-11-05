@@ -1,12 +1,14 @@
 package com.equipazo.domain;
 
-import lombok.Data;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
 
-import java.util.Map;
-
-@Data
+@Setter
+@Getter
+@AllArgsConstructor
 public class User {
-    private long id;
+    private Long id;
     private String name;
     private String mobile;
 }

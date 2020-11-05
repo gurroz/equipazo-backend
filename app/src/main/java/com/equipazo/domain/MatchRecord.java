@@ -10,5 +10,5 @@ public class MatchRecord {
     private RecordType type;
     private Date date;
     private Formation team;
-    private Player player;
+    private TeamMember player;
 }

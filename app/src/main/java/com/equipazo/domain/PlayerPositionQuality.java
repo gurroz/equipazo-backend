@@ -6,7 +6,7 @@ import java.util.Set;
 
 @Data
 public class PlayerPositionQuality {
-    private Player player;
+    private TeamMember player;
     private PlayerPosition position;
     private Set<PlayerQuality> qualities;
 }

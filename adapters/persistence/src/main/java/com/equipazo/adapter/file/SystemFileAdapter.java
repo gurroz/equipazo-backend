@@ -29,6 +29,9 @@ public class SystemFileAdapter implements SaveFilePort {
             String finalPath = filePath + file.getOriginalFilename();
             File dest = new File(finalPath);
 
+            if(dest.exists())
+                dest.delete();
+
             file.transferTo(dest);
             result = finalPath;
 

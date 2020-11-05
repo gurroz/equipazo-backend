@@ -1,5 +1,6 @@
 package com.equipazo.adapter.rest;
 
+import com.equipazo.app.port.in.CRUDTeamMemberUseCase;
 import com.equipazo.app.port.in.CRUDTeamUseCase;
 import com.equipazo.domain.Team;
 import lombok.RequiredArgsConstructor;
@@ -24,20 +25,60 @@ import java.util.stream.Collectors;
 public class CRUDTeamController {
 
     private final CRUDTeamUseCase CRUDTeamUseCase;
+    private final CRUDTeamMemberUseCase CRUDTeamMemberUseCase;
 
     @CrossOrigin
     @PostMapping
-    public void saveTeam(@RequestParam(name = "teamData") @RequestBody TeamDataDTO teamDTO
+    public void createTeam(@RequestParam(name = "data") @RequestBody TeamDataDTO teamDTO
             , @RequestParam(name = "file", required = false) @Valid final MultipartFile emblemFile
             , HttpServletResponse response) {
 
         try {
-            log.debug("POST saveTeam: {}, {}", teamDTO, emblemFile);
+            log.debug("POST createTeam: {}, {}", teamDTO, emblemFile);
 
-            response.setStatus(HttpStatus.OK.value());
+            response.setStatus(HttpStatus.CREATED.value());
             Team team = teamDTO.mapToTeam();
 
-            CRUDTeamUseCase.saveTeam(team, emblemFile);
+            CRUDTeamUseCase.createTeam(team, emblemFile);
+        } catch(Exception e) {
+            log.error("Error is: {}", e);
+            response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
+        }
+    }
+
+    @CrossOrigin
+    @PutMapping("/{id}")
+    public void saveTeam(@PathVariable long id
+            , @RequestParam(name = "data") @RequestBody TeamDataDTO teamDTO
+            , @RequestParam(name = "file", required = false) @Valid final MultipartFile emblemFile
+            , HttpServletResponse response) {
+
+        try {
+            log.debug("POST saveTeam: {}, {}, {}", id, teamDTO, emblemFile);
+            response.setStatus(HttpStatus.OK.value());
+
+            CRUDTeamUseCase.saveTeam(id, teamDTO.getName(), emblemFile);
+        } catch(Exception e) {
+            log.error("Error is: {}", e);
+            response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
+        }
+    }
+
+    @CrossOrigin
+    @PutMapping("/{id}/team-member")
+    public void saveTeamMember(@PathVariable long id
+            , @RequestParam(name = "data") @RequestBody TeamMemberDTO teamMember
+            , @RequestParam(name = "file", required = false) @Valid final MultipartFile pictureFile
+            , HttpServletResponse response) {
+        try {
+            log.debug("POST saveTeamCoaches: {}, {}, {}", id, teamMember, pictureFile);
+
+            response.setStatus(HttpStatus.OK.value());
+            if(teamMember.isCoach()) {
+                CRUDTeamUseCase.saveTeamCoach(id, teamMember.getId(), teamMember.getName(), teamMember.getMobile(), pictureFile);
+            } else {
+                CRUDTeamUseCase.saveTeamPlayer(id, teamMember.getId(), teamMember.getName(), teamMember.getMobile(), pictureFile);
+            }
         } catch(Exception e) {
             log.error("Error is: {}", e);
             response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
@@ -57,6 +98,8 @@ public class CRUDTeamController {
             response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
         }
 
+        log.debug("Response is: {}", responseBody);
+
         return responseBody;
     }
 
@@ -67,12 +110,14 @@ public class CRUDTeamController {
         try {
             response.setStatus(HttpStatus.OK.value());
             Team team = CRUDTeamUseCase.getTeam(id);
+            log.debug("GET TEAMS: {}",team);
             responseBody = new TeamDataDTO(team, "/rest/teams/");
         } catch(Exception e) {
             log.error("Error is: {}", e);
             response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
         }
 
+        log.debug("Response is: {}", responseBody);
         return responseBody;
     }
 
@@ -81,6 +126,21 @@ public class CRUDTeamController {
     public byte[] getEmblem(@PathVariable long id, HttpServletResponse response) {
         try {
             InputStream in = CRUDTeamUseCase.getTeamEmblem(id);
+            return IOUtils.toByteArray(in);
+        } catch(Exception e) {
+            log.error("Error is: {}", e);
+            response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
+        }
+
+        return null;
+    }
+
+    @GetMapping(value = "/{teamId}/member/{memberId}/profilePic",
+            produces = MediaType.IMAGE_JPEG_VALUE)
+    public byte[] getTeamMemberProfilePic(@PathVariable long teamId
+            , @PathVariable long memberId, HttpServletResponse response) {
+        try {
+            InputStream in = CRUDTeamMemberUseCase.getTeamMemberProfilePic(memberId, teamId);
             return IOUtils.toByteArray(in);
         } catch(Exception e) {
             log.error("Error is: {}", e);
