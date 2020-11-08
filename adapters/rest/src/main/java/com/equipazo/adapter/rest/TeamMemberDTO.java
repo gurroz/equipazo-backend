@@ -34,7 +34,9 @@ public class TeamMemberDTO {
         this.id = teamMember.getId();
         this.name = teamMember.getUser().getName();
         this.mobile = teamMember.getUser().getMobile();
-        this.picture = baseURL + "/member/" + teamMember.getId() + "/profilePic";
+        if(teamMember.getImage() != null && !teamMember.getImage().isEmpty()) {
+            this.picture = baseURL + "/member/" + teamMember.getId() + "/profilePic";
+        }
         this.type = type;
     }
 
