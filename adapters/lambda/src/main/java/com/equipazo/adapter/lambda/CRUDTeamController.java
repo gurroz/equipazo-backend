@@ -1,4 +1,4 @@
-package com.equipazo.adapter.rest;
+package main.java.com.equipazo.adapter.lambda;
 
 import com.equipazo.app.port.in.CRUDTeamMemberUseCase;
 import com.equipazo.app.port.in.CRUDTeamUseCase;

@@ -42,7 +42,7 @@ public class CRUDTeamMemberService implements CRUDTeamMemberUseCase {
             }
         }
 
-        TeamMember newMember  = new TeamMember(newUser.getId(), newUser, "");
+        TeamMember newMember  = new TeamMember(newUser.getId(), newUser, "", 0);
         String fullMemberPath = "";
         try {
             if(picture != null) {

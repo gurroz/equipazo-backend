@@ -14,6 +14,6 @@ public class Match {
     private int awayTeamScore;
     private Date startDate;
     private Date finishDate;
-    private Place place;
+    private Location location;
     private List<MatchRecord> records;
 }

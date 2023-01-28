@@ -2,10 +2,8 @@ package com.equipazo.domain;
 
 import lombok.Data;
 
-import java.util.Map;
-
 @Data
-public class Place {
+public class Location {
     private long id;
     private String name;
     private String address;

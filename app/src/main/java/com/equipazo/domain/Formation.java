@@ -7,6 +7,8 @@ import java.util.Map;
 @Data
 public class Formation {
     private long id;
-    private Squad squad;
-    private Map<PlayerPosition, TeamMember> positions;
+    private Team team;
+    private Map<PlayerPosition, TeamMember> players;
+    private Map<PlayerPosition, TeamMember> bench;
+
 }

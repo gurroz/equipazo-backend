@@ -14,6 +14,7 @@ public class TeamMember {
     private Long id;
     private User user;
     private String image;
+    private Integer jersey;
 
     public String getFolderPath(String baseDir) {
         return baseDir + File.separator
