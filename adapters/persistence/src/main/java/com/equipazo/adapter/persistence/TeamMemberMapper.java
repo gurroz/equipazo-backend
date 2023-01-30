@@ -35,6 +35,6 @@ public class TeamMemberMapper {
         return new TeamMember(
                 userJPA.getId()
                 , userMapper.mapToUser(userJPA)
-                , teamMemberJPA.getImage());
+                , teamMemberJPA.getImage(), 0);
     }
 }

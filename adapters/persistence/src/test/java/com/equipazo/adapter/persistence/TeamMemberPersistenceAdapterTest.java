@@ -30,7 +30,7 @@ public class TeamMemberPersistenceAdapterTest {
     void createTeamMember() {
         long id = 1l;
         User user = new User(null, "Juanito", "1234567");
-        TeamMember teamMember = new TeamMember(null, user, "http://www.google.com/naranja");
+        TeamMember teamMember = new TeamMember(null, user, "http://www.google.com/naranja", 0);
 
         Team team = new Team(null, "La naranja");
         team = teamAdapter.saveTeam(team);
